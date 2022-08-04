@@ -144,3 +144,72 @@ container in the same network can talk with container name (no need of port)
 docker network network ls
 
 ```
+
+## Dockerfile:
+In above section we learn how to work with exiting docker images but what if we want to create our own docker image for project ?.
+We use Dockerfile to create the image for our project.
+Follow below steps:
+
+#### Create new folder in your directory:
+```bash
+mkdir docker_demo
+
+```
+
+#### Create vertual enviroment:
+```bash
+virtualenv demo
+
+```
+#### Activate vertual enviroment:
+```bash
+source demo/bin/activate
+
+```
+#### Create file name hello.py and put below contain in the file:
+```bash
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello World!"
+
+
+```
+#### Install Flask and run the file:
+```bash
+pip install Flask
+
+```
+#### Create file of name Dockerfile and put below contain in it:
+
+```bash
+# syntax=docker/dockerfile:1
+FROM ubuntu:22.04
+
+# install app dependencies
+RUN apt-get update && apt-get install -y python3 python3-pip
+RUN pip install flask==2.1.*
+
+# install app
+COPY hello.py /
+
+# final configuration
+ENV FLASK_APP=hello
+EXPOSE 8000
+CMD flask run --host 0.0.0.0 --port 8000
+
+```
+#### create image:
+```bash
+sudo docker build -t [image name:tag] [path of Dockerfile]
+ex: sudo docker build -t hello:latest .
+
+```
+#### Run the created image:
+```bash
+sudo docker run -p 8000:8000 hello:latest
+
+```
+From your computer, open a browser and navigate to http://localhost:8000 you will see app is working.

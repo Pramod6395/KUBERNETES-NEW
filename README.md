@@ -177,11 +177,7 @@ def hello():
 
 
 ```
-#### Install Flask and run the file:
-```bash
-pip install Flask
 
-```
 #### Create file of name Dockerfile and put below contain in it:
 
 ```bash

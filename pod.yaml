@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fft
+  labels:
+    app: fft-test
+spec:
+  containers:
+    - name: myapp
+      imagePullPolicy: IfNotPresent
+      image: send_telemetry
+      ports:
+        - containerPort: 8080
+    

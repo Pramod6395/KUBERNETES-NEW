@@ -99,4 +99,9 @@ Delete HorizontalPodAutoscaler(hpa)
 ```bash
 kubectl delete hpa NAME-OF-HPA
 ```
+Update k8s ConfigMap or Secret without deleting the existing one
+```bash
+kubectl create configmap config-tel --from-file=/home/pramod/Desktop/Nodebook/project/new_docker/app/ -o yaml --dry-run | kubectl apply -f -
+
+```
 

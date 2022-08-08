@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fft
+  labels:
+    app: fft-test
+spec:
+  containers:
+    - name: myapp
+      imagePullPolicy: IfNotPresent
+      image: send_telemetry
+      voulumeMounts:
+	- name: tel-config
+	  mountPath: /app/
+      ports:
+        - containerPort: 8080	
+  volumes:
+    - name: tel-config		
+      configMap:
+	name: config-tel

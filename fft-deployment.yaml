@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fft-deployment
+  labels:
+    app: fft
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fft
+  template:
+    metadata:
+      labels:
+        app: fft
+    spec:
+      containers:
+        - name: fft
+          imagePullPolicy: IfNotPresent
+          image: 'new_tel:v2'
+          volumeMounts:
+            - name: config-volume
+              mountPath: /app/
+          ports:
+            - containerPort: 80
+      volumes:
+        - name: config-volume
+          configMap:
+            name: config-tel
+      restartPolicy: Always

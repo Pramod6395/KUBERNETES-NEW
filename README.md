@@ -104,4 +104,9 @@ Update k8s ConfigMap or Secret without deleting the existing one
 kubectl create configmap config-tel --from-file=/home/pramod/Desktop/Nodebook/project/new_docker/app/ -o yaml --dry-run | kubectl apply -f -
 
 ```
+Delete deployments
+```bash
+kubectl delete deploy <deployment name>
+
+```
 

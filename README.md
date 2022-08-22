@@ -109,4 +109,8 @@ Delete deployments
 kubectl delete deploy <deployment name>
 
 ```
+To enter into to the pods console
+```bash
+ kubectl exec -it <pod name> bin/bash
+```
 

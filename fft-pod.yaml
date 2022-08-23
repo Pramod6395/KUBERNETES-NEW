@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fft
+spec:
+  containers:
+    - name: myapp
+      imagePullPolicy: IfNotPresent
+      image: new_tel:v2
+      volumeMounts:
+        - name: config-volume
+          mountPath: /app/
+  volumes:
+    - name: config-volume
+      configMap:
+        # Provide the name of the ConfigMap containing the files you want
+        # to add to the container
+        name: config-tel
+  restartPolicy: Never

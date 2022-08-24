@@ -114,3 +114,7 @@ To enter into to the pods console
  kubectl exec -it <pod name> bin/bash
 ```
 
+To enter into to the pods console
+```bash
+ kubectl config set-context --current --namespace=NAMESPACE
+```

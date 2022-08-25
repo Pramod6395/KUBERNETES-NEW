@@ -118,3 +118,8 @@ To set default namespace
 ```bash
  kubectl config set-context --current --namespace=NAMESPACE
 ```
+Minikube dashboard with matrics
+```bash
+minikube addons enable metrics-server
+minikube dashboard --url
+```

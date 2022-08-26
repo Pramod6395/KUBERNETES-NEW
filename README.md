@@ -123,3 +123,8 @@ Minikube dashboard with matrics
 minikube addons enable metrics-server
 minikube dashboard --url
 ```
+
+To check envirment variable of any pod
+```bash
+ kubectl exec PODNAME -- printenv
+```

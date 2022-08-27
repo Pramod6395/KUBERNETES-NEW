@@ -128,3 +128,8 @@ To check envirment variable of any pod
 ```bash
  kubectl exec PODNAME -- printenv
 ```
+Port forwarding for specific service.
+```bash
+ kubectl port-forward --address 0.0.0.0 services/[service-name] [extrenalport]:[service-internalport]
+ kubectl port-forward --address 0.0.0.0 services/tb-node 8080:8080
+```

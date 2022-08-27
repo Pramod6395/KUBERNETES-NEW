@@ -133,3 +133,14 @@ Port forwarding for specific service.
  kubectl port-forward --address 0.0.0.0 services/[service-name] [extrenalport]:[service-internalport]
  kubectl port-forward --address 0.0.0.0 services/tb-node 8080:8080
 ```
+Port forwarding for specific service in baground.
+```bash
+ kubectl port-forward --address 0.0.0.0 services/[service-name] [extrenalport]:[service-internalport] &
+ kubectl port-forward --address 0.0.0.0 services/tb-node 8080:8080 &
+```
+To display the linux process and kill the pid.
+```bash
+netstat -tulpn
+kill <pid>
+```
+

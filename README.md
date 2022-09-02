@@ -144,3 +144,13 @@ netstat -tulpn
 kill <pid>
 ```
 
+To check CPU and RAM consumation of any pod.
+```bash
+kubectl top pod [pod name]
+```
+
+To enter into specific container in pod [Multicontainer Pod].
+```bash
+kubectl exec -it [pod name] -c [container name ] bash
+```
+

@@ -156,6 +156,6 @@ kubectl exec -it [pod name] -c [container name ] bash
 
 Generate Deployment YAML file (-o yaml). Don't create it(--dry-run)
 ```bash
-kubectl create deployment --image=nginx nginx --dry-run=client -o yaml
+kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yaml
 ```
 

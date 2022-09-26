@@ -159,3 +159,10 @@ Generate Deployment YAML file (-o yaml). Don't create it(--dry-run)
 kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yaml
 ```
 
+
+Copy file from pod to current directory
+```bash
+touch xyz.txt
+kubectl cp podname:file-path-in-pod/filename destination file name
+```
+

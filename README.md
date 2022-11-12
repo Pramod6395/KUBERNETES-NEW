@@ -113,7 +113,10 @@ To enter into to the pods console
 ```bash
  kubectl exec -it <pod name> bin/bash
 ```
-
+To check inside logfile without entering into pod
+```bash
+kubectl exec -it <podname> -- tail -f /var/log/file.log
+```
 To set default namespace
 ```bash
  kubectl config set-context --current --namespace=NAMESPACE

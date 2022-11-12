@@ -165,4 +165,7 @@ Copy file from pod to current directory
 touch xyz.txt
 kubectl cp podname:file-path-in-pod/filename destination file name
 ```
-
+To see the scheduling and creating event of pod
+```bash
+kubectl get events -o wide
+```

@@ -172,3 +172,8 @@ To see the scheduling and creating event of pod
 ```bash
 kubectl get events -o wide
 ```
+To set shortcut alias for command
+```bash
+alias k=kubectl
+k get pod
+```

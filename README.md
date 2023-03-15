@@ -177,3 +177,7 @@ To set shortcut alias for command
 alias k=kubectl
 k get pod
 ```
+To backup the all resources present in cluster
+```bash
+Kubectl get all --all-namespaces -o yaml > all-deploy-services.yaml
+```

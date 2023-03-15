@@ -181,3 +181,13 @@ To backup the all resources present in cluster
 ```bash
 Kubectl get all --all-namespaces -o yaml > all-deploy-services.yaml
 ```
+
+To backup the ETCD database in kubeadm
+```bash
+ETCDCTL_API=3 etcdctl --endpoints=https://[127.0.0.1]:2379 \
+ --cacert=/etc/kubernetes/pki/etcd/ca.crt \
+ --cert=/etc/kubernetes/pki/etcd/server.crt \
+ --key=/etc/kubernetes/pki/etcd/server.key \
+ snapshot save /opt/snapshot-pre-boot.db
+
+```

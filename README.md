@@ -191,3 +191,11 @@ ETCDCTL_API=3 etcdctl --endpoints=https://[127.0.0.1]:2379 \
  snapshot save /opt/snapshot-pre-boot.db
 
 ```
+To check status of etcd snapshot
+```bash
+ETCDCTL_API=3 etcdctl snapshot status /opt/snapshot-pre-boot.db
+```
+To restore the etcd  snapshot
+```bash
+ETCDCTL_API=3 etcdctl snapshot restore /opt/snapshot-pre-boot.db
+```

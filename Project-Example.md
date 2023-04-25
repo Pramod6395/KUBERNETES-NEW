@@ -171,7 +171,7 @@ Now just click on URL  http://192.168.49.2:30000 you will see web page for mongo
 
 ![image](https://user-images.githubusercontent.com/73251890/234200885-06830218-23ce-4f37-9f1e-ec7a7d38a726.png)
 
-### 7. Once done with all exceside you can delete all resources using below command.
+### 7. Once done with all exercise you can delete all resources using below command.
 ~~~bash
 kubectl delete -f mongo-express.yaml -f mongo.yaml -f mongo-secret.yaml -f mongo-configmap.yaml
 ~~~

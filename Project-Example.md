@@ -150,10 +150,7 @@ Put encoded text in above file for mongo-root-usernam and  mongo-root-password
 
 ### 4. Deploy all resources using below command.
 ~~~bash
-kubectl create -f mongo-secret.yaml
-kubectl create -f mongo-configmap.yaml
-kubectl create -f mongo.yaml
-kubectl create -f mongo-express.yaml
+kubectl create -f mongo-secret.yaml -f mongo-configmap.yaml -f mango.yaml -f mongo-express.yaml
 ~~~
 Note: order should be same to execute above command.
 ### 5. Check our deployment and pods
@@ -174,3 +171,7 @@ Now just click on URL  http://192.168.49.2:30000 you will see web page for mongo
 
 ![image](https://user-images.githubusercontent.com/73251890/234200885-06830218-23ce-4f37-9f1e-ec7a7d38a726.png)
 
+### 7. Once done with all exceside you can delete all resources using below command.
+~~~bash
+kubectl delete -f mongo-express.yaml -f mongo.yaml -f mongo-secret.yaml -f mongo-configmap.yaml
+~~~

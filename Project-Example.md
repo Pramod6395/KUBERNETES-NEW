@@ -166,7 +166,7 @@ minikube service list
 ~~~
 ![image](https://user-images.githubusercontent.com/73251890/234200450-71bfb9de-b5f1-4cc1-a547-79d05de6f746.png)
 
-Now just click on URL  http://192.168.49.2:30000 you will see web page for mongo-express.
+Now just click on URL  http://192.168.49.2:30000 (may be different IP in your case) you will see web page for mongo-express.
 
 
 ![image](https://user-images.githubusercontent.com/73251890/234200885-06830218-23ce-4f37-9f1e-ec7a7d38a726.png)

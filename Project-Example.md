@@ -150,7 +150,7 @@ Put encoded text in above file for mongo-root-usernam and  mongo-root-password
 
 ### 4. Deploy all resources using below command.
 ~~~bash
-kubectl create -f mongo-secret.yaml -f mongo-configmap.yaml -f mango.yaml -f mongo-express.yaml
+kubectl create -f mongo-secret.yaml -f mongo-configmap.yaml -f mongo.yaml -f mongo-express.yaml
 ~~~
 Note: order should be same to execute above command.
 ### 5. Check our deployment and pods
